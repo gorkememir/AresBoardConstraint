@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="rowStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">3dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">3dp</item>
+    </style>
+    <style name="buttonBronze">
+        <item name="android:layout_weight">1</item>
+        <item name="strokeColor">@color/bronze</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:backgroundTint">@color/bronze</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">"1"</item>    </style>
+    <style name="buttonSilver">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:backgroundTint">@color/silver</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">"5"</item>    </style>
+    <style name="buttonGold">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:backgroundTint">@color/gold</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">"10"</item>
+    </style>
+    <style name="emptyTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:autoSizeTextType" tools:targetApi="o">uniform</item>
+        <item name="android:layout_height">70dp</item>
+
+    </style>
+    <style name="buttonSpend">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:backgroundTint">@color/darkGray</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:text">@string/spend</item>
+    </style>
+    <style name="resourceImage">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="plusSign">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:src">@drawable/plus</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:background">@drawable/ic_toggle_bg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+    <style name="toggleButton">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">10dp</item>
+        <item name="android:checked">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

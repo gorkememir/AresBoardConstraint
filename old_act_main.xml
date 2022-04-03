@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/income"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="47dp"
+            android:layout_marginRight="47dp"
+            android:text="@string/stock"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mcLayout"
+        style="@style/rowStyle"
+        android:background="@drawable/back"
+        android:backgroundTint="@color/mcBg">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            style="@style/resourceImage"
+            android:src="@drawable/gold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            style="@style/plusSign"
+            android:onClick="mcIncome"
+            app:layout_constraintEnd_toStartOf="@+id/mcIncome"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/mcIncome"
+            style="@style/emptyTextView"
+            android:layout_width="wrap_content"
+            android:text="@string/_0"
+            android:textIsSelectable="true"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView7" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            style="@style/plusSign"
+            android:onClick="mcOne"
+            android:src="@drawable/browncube"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mcIncome" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            style="@style/plusSign"
+            android:onClick="mcFive"
+            android:src="@drawable/silvercube"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            style="@style/plusSign"
+            android:onClick="mcTen"
+            android:src="@drawable/goldcube"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mcStockTv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mcStockTv"
+            style="@style/emptyTextView"
+            android:layout_width="wrap_content"
+            android:text="@string/_0"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/mcToggleBt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView10" />
+
+        <ToggleButton
+            android:id="@+id/mcToggleBt"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mcStockTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        style="@style/rowStyle"
+        android:background="@color/heatBg">
+
+
+        <ImageView
+            android:id="@+id/imageView11"
+            style="@style/resourceImage"
+            android:src="@drawable/heat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            style="@style/plusSign"
+            android:layout_height="wrap_content"
+            android:onClick="heatIncome"
+            app:layout_constraintEnd_toStartOf="@+id/heatIncome"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView11" />
+
+        <TextView
+            android:id="@+id/heatIncome"
+            style="@style/emptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/_0"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView12" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            style="@style/plusSign"
+            android:layout_height="wrap_content"
+            android:onClick="heatOne"
+            android:src="@drawable/browncube"
+            app:layout_constraintEnd_toStartOf="@+id/imageView14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/heatIncome" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            style="@style/plusSign"
+            android:layout_height="wrap_content"
+            android:onClick="heatFive"
+            android:src="@drawable/silvercube"
+            app:layout_constraintEnd_toStartOf="@+id/imageView15"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView13" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            style="@style/plusSign"
+            android:layout_height="wrap_content"
+            android:onClick="heatTen"
+            android:src="@drawable/goldcube"
+            app:layout_constraintEnd_toStartOf="@+id/heatStock"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView14" />
+
+        <TextView
+            android:id="@+id/heatStock"
+            style="@style/emptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/_0"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/heatToggleBt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView15" />
+
+        <ToggleButton
+            android:id="@+id/heatToggleBt"
+            style="@style/toggleButton"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_toggle_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/heatStock"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/plantBg"
+        style="@style/rowStyle">
+        <ImageView
+            style="@style/resourceImage"
+            android:layout_width="80dp"
+            android:src="@drawable/plant" />
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="plantIncome"/>
+        <TextView
+            android:id="@+id/plantIncome"
+            style="@style/emptyTextView"
+            android:text="@string/_0"
+            android:textIsSelectable="true"
+            android:textSize="30sp" />
+        <ImageView
+            style="@style/plusSign"
+            android:src="@drawable/browncube"
+            android:onClick="plantOne"/>
+        <ImageView
+            style="@style/plusSign"
+            android:src="@drawable/silvercube"
+            android:onClick="plantFive"/>
+        <ImageView
+            style="@style/plusSign"
+            android:src="@drawable/goldcube"
+            android:onClick="plantTen"/>
+
+        <TextView
+            android:id="@+id/plantStock"
+            style="@style/emptyTextView"
+            android:text="@string/_0"
+            android:textIsSelectable="true"
+            android:textSize="30sp" />
+
+        <ToggleButton
+            android:id="@+id/plantToggleBt"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/lightBlue"
+        android:layout_weight=".7"
+        style="@style/rowStyle">
+        <ImageView
+            style="@style/resourceImage"
+            android:text="@string/steel"
+            android:src="@drawable/card"
+            android:layout_width="80dp"/>
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="cardInc"/>
+        <TextView
+            android:id="@+id/cardIncome"
+            style="@style/emptyTextView"
+            android:text="@string/_0"
+            android:textIsSelectable="true"
+            android:textSize="30sp" />
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="cardDec"
+            android:src="@drawable/minus" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/steelBg"
+        android:layout_weight=".7"
+        style="@style/rowStyle">
+        <ImageView
+            style="@style/resourceImage"
+            android:text="@string/steel"
+            android:src="@drawable/steel"
+            android:layout_width="80dp"/>
+
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="steelInc"/>
+
+        <TextView
+            android:id="@+id/steelIncome"
+            style="@style/emptyTextView"
+            android:text="@string/_0"
+            android:textIsSelectable="true"
+            android:textSize="30sp" />
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="steelDec"
+            android:src="@drawable/minus" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/titanBg"
+
+        android:layout_weight=".7"
+        style="@style/rowStyle">
+        <ImageView
+            style="@style/resourceImage"
+            android:text="@string/steel"
+            android:src="@drawable/titanium"
+            android:layout_width="80dp"/>
+
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="titaniumInc"/>
+
+        <TextView
+            android:id="@+id/titaniumIncome"
+            style="@style/emptyTextView"
+            android:text="@string/_0"
+            android:textIsSelectable="true"
+            android:textSize="30sp" />
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="titaniumDec"
+            android:src="@drawable/minus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/almostWhite"
+        android:layout_weight=".7"
+        style="@style/rowStyle">
+        <ImageView
+            style="@style/resourceImage"
+            android:text="@string/steel"
+            android:src="@drawable/crown"
+            android:layout_width="80dp"/>
+
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="trInc" />
+
+        <TextView
+            android:id="@+id/TrTv"
+            style="@style/emptyTextView"
+            android:text="@string/_5"
+            android:textIsSelectable="true"
+            android:textSize="30sp" />
+
+        <ImageView
+            style="@style/plusSign"
+            android:onClick="trDec"
+            android:src="@drawable/minus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/plantBg"
+            android:text="@string/produce"
+            android:textSize="46sp"
+            android:textColor="@color/darkGreen"
+            app:cornerRadius="40dp"
+            android:onClick="produce"/>
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Ares Expedition Resource Board</string>
+    <string name="income">Income</string>
+    <string name="stock">Stock</string>
+    <string name="mc">MC</string>
+    <string name="heat">Heat</string>
+    <string name="plant">Plant</string>
+    <string name="steel">Steel</string>
+    <string name="titanium">Titanium</string>
+    <string name="i_chose_production_phase_4_mc">I chose production phase (+4 MC)</string>
+    <string name="produce">Produce!</string>
+    <string name="income_1">Inc+1</string>
+    <string name="spend">Spend</string>
+    <string name="how_much">How much?</string>
+    <string name="_5">5</string>
+    <string name="_0">0</string>
+    <string name="tr_1">TR+1</string>
+    <string name="tr">TR</string>
+    <string name="tr_1_minus">TR-1</string>
+</resources>
